@@ -1,0 +1,26 @@
+{
+  "name": "groceryview",
+  "version": "1.0.0",
+  "description": "unique view on grocery price updates",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "test"
+  },
+  "keywords": [
+    "groceries",
+    "cereal",
+    "potatoes",
+    "price",
+    "avocados"
+  ],
+  "author": "yermie123",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.73.0"
+  }
+}
