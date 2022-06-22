@@ -3,13 +3,53 @@
     <meta charset="UTF-8">
     <title>GroceryView</title>
 </head>
+<style>
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        background-color: rgb(219, 238, 255);
+    }
+    #topleftheadline{
+        margin-left: 10px;
+        font-size: 100%;
+    }
+    #bundled-authentication-page{
+        margin-right: 10px;
+    }
+    #signup-button{
+        
+    }
+    #login-button{
+
+    }
+    img{
+        height: auto;
+        width: 500px;
+    }
+    h1{
+        text-align: center;
+        font-size: 25px;
+    }
+</style>
 <body>
-    <h1>Input Here</h1>
-    <div id="root">
+    <header>
+        <h2 id="topleftheadline">GroceryView</h2>
+        <div id="bundled-authentication-page">
+            <button id="signup-button">Sign Up</button>
+            <button id="login-button">Login</button>
+        </div>
+    </header>
+    <body>
+        <img src="bananaspic.jpg" alt="test image">
+        <h1>Our Evergrowing Selection:</h1>
         <div id="app">
 
         </div>
-    </div>
+    </body>
 
 </body>
 </html>
