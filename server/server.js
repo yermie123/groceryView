@@ -10,14 +10,26 @@ if(NODE_ENV='production'){
   app.use('/build', express.static(path.join(__dirname, '../build')));
 }
 
+//this is the root request
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../index.html'));
 });
+
+//this is the signup page request
+app.get('/signup', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/secondarypages.html'));
+});
+
+//this is the login page request
+app.get('/login', (req, res) => {
+  res.sendFile(path.resolve(__dirnam, '../client/login.html'));
+})
 
 //signup should create a user, store the info with a hashed password,
 // and start a session cookie
 app.post('/signup',
   userController.newUser,
+  cookiesController.setSessionCookie,
   activeController.activateSession,
   //if the middleware brought you here, there's no turning back
   (req, res) => {

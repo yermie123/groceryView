@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
+const { Resolver } = require('webpack');
 
 const userController = {};
 
@@ -27,6 +28,33 @@ userController.newUser = (req, res, next) => {
     }
 };
 
-userController.checkUser = (req, res, next) => {
-    
+userController.checkUser = async (req, res, next) => {
+    //same here
+    const { username, password } = req.body;
+    //same here as well
+    if(!username || !password){
+        return next({
+            error: 'Username or Password is Incorrect'
+        });
+    }
+    const temp = await User.findOne({username});
+
+    if(!temp) {
+        //if the username wasn't found, redirect path is filled, which is checked in server.js file
+        res.locals.redirectPath = '/signup';
+        return next();
+    }
+    bcrypt.compare(password, temp.password)
+        .then(res => {
+            if(res){
+                res.locals.redirectPath = '/secret';
+                res.locals.id = temp._id.id;
+            } else {
+                res.locals.redirectPath = '/signup';
+            }
+            return next();
+        })
+        .catch(err => {return next(err)});
+
 }
+
