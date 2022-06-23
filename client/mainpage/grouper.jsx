@@ -18,3 +18,7 @@ class Grouper extends Component{
         );
     }
 }
+
+
+
+export default Grouper;

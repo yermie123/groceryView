@@ -1,3 +1,32 @@
+$blackish: rgb(49, 49, 49);
+
 h1{
-    font-size: small;
+    font-size: 25px;
+}
+#app{
+    margin-left: 20%;
+    margin-right: 20%;
+    #info-card{
+        width: auto;
+        height: 200px;
+        border: 2px solid $blackish;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 
+        "pic deets"
+        "pic link";
+        align-items: center;
+        #selectimg{
+            grid-area: pic;
+            height: 95%;
+        }
+        #deets-div{
+            grid-area: deets;
+        }
+        #link-section{
+            grid-area: link;
+        }
+    }
+
 }
