@@ -1,14 +1,17 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+//i removed this thing from the json file, couldn't comment it out just in case
+//"dev": "concurrently \"cross-env NODE_ENV=development nodemon server/server.js\" \"cross-env NODE_ENV=development webpack serve --open --hot\" ",
+
 module.exports = {
     mode: "production",
     entry: {
         src: './client/index.js',
     },
     output: {
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -17,11 +20,12 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/env', '@babel/react']
+                    presets: ['@babel/preset-env', '@babel/preset-react']
                 }
             },
             {
                 test: /\.s?css/,
+                exclude: /node_modules/,
                 use: [
                     'style-loader', 'css-loader', 'sass-loader'
                 ]

@@ -3,8 +3,8 @@ const activeController = {};
 
 //check if the person is logged in based on the cookie info
 activeController.cookieCheck = (req, res, next) => {
-    //checks if ssid is not present in cookies
-    if(!req.cookies.ssid){
+    //checks if cookie is not present in cookies
+    if(!req.cookies.imhonestlydonewiththiscrap){
         res.locals.redirect = '/signup';
     }
     //otherwise, the user is good to go to the secret page
@@ -16,6 +16,7 @@ activeController.activateSession = (req, res, next) => {
         if(err){
             return next('Ok, there seems to be some kind of issue, but I am to tired to care right now');
         }
+        console.log('created');
         return next();
     })
 };

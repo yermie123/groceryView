@@ -4,8 +4,9 @@
   "description": "unique view on grocery price updates",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "NODE_ENV=production nodemon server/server.js",
     "build": "webpack",
+    "dev": "concurrently \"cross-env NODE_ENV=development nodemon server/server.js\" \"cross-env NODE_ENV=development webpack serve --open --hot\" ",
     "test": "test"
   },
   "keywords": [
@@ -20,23 +21,32 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "chai": "^4.3.6",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mocha": "^10.0.0",
     "mongoose": "^6.4.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "redis": "^4.1.0",
+    "sinon": "^14.0.0",
+    "supertest": "^6.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
   }
 }

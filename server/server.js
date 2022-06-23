@@ -5,16 +5,27 @@ const cookieParser = require('cookie-parser');
 const activeController = require('./controllers/activeController');
 const userController = require('./controllers/userController');
 const cookiesController = require('./controllers/cookiesController');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const mongoURI = 'mongodb://localhost/auth';
+mongoose.connect(mongoURI)
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+
 
 //line
 if(NODE_ENV='production'){
   console.log('here is the file: ', path.join(__dirname, '../build'));
-  app.use('/build', express.static(path.join(__dirname, '../build')));
+  app.use('/build', express.static(path.join(__dirname, '/build')));
 }
+// app.use(express.static(path.join(__dirname, 'App', '/build')));
 
 //this is the root request
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../index.html'));
+   return res.sendFile(path.resolve(__dirname, '../index.html'));
 });
 
 //this is the signup page request
@@ -35,9 +46,9 @@ app.post('/signup',
   activeController.activateSession,
   //if the middleware brought you here, there's no turning back
   (req, res) => {
-    res.redirect(302, res.locals.redirectPath);
+    res.redirect(302, '/secret');
   }
-)
+);
 
 
 
@@ -48,7 +59,7 @@ app.get('/secret', activeController.cookieCheck,
     if(res.locals.redirect){
       res.redirect(302, res.locals.redirect);
     } else {
-      res.sendFile(path.resolve(__dirname, '../client/secret.html'));
+      res.sendFile(path.resolve(__dirname, '../client/secondarypages/secret.html'));
     }
   }
 );
