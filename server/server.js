@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const activeController = require('./controllers/activeController');
+const userController = require('./controllers/userController');
+const cookiesController = require('./controllers/cookiesController');
 
 //line
 if(NODE_ENV='production'){
@@ -17,13 +19,13 @@ app.get('/', (req, res) => {
 
 //this is the signup page request
 app.get('/signup', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/secondarypages.html'));
+  res.sendFile(path.resolve(__dirname, '../client/secondarypages/signup.html'));
 });
 
 //this is the login page request
 app.get('/login', (req, res) => {
-  res.sendFile(path.resolve(__dirnam, '../client/login.html'));
-})
+  res.sendFile(path.resolve(__dirname, '../client/secondarypages/login.html'));
+});
 
 //signup should create a user, store the info with a hashed password,
 // and start a session cookie

@@ -58,3 +58,4 @@ userController.checkUser = async (req, res, next) => {
 
 }
 
+module.exports = userController;
