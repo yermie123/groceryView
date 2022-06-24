@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 class Pic extends Component {
+    constructor(props){
+        super(props);
+    }
+
     render() {
         return (
-            <img id="selectimg" src="https://www.cheerios.com/wp-content/uploads/2021/11/Honey-Nut-Cheerios_460x460.png" />
+            <img id="selectimg" src={this.props.npic} />
         )
     }
 };

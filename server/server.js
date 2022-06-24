@@ -17,11 +17,12 @@ app.use(cookieParser());
 
 
 //line
-if(NODE_ENV='production'){
-  console.log('here is the file: ', path.join(__dirname, '../build'));
-  app.use('/build', express.static(path.join(__dirname, '/build')));
-}
+// if(NODE_ENV='production'){
+//   console.log('here is the file: ', path.join(__dirname, '../build'));
+//   app.use('/build', express.static(path.join(__dirname, '/build')));
+// }
 // app.use(express.static(path.join(__dirname, 'App', '/build')));
+app.use('/build', express.static(path.join(__dirname, '../build')));
 
 //this is the root request
 app.get('/', (req, res) => {

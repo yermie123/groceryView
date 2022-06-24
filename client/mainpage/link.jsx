@@ -4,7 +4,7 @@ class Link extends Component {
     render() {
         return (
             <div id="link-section">
-                <button id="pushtorecord">Press Here to Start Recording</button>
+                <a href={this.props.nlink}><button id="pushtorecord">Press Here to Start Recording</button></a>
             </div>
         )
     }

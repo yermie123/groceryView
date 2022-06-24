@@ -5,6 +5,6 @@ import ReactDOM from 'react-dom';
 import styles from './mainpage/styles.scss';
 
 ReactDOM.render(
-    <h1>Hi</h1>,
+    <App />,
     document.getElementById('app')
 );

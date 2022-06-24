@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //"dev": "concurrently \"cross-env NODE_ENV=development nodemon server/server.js\" \"cross-env NODE_ENV=development webpack serve --open --hot\" ",
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: {
         src: './client/index.js',
     },

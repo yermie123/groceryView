@@ -6,7 +6,7 @@ h1{
 #app{
     margin-left: 20%;
     margin-right: 20%;
-    #info-card{
+    .info-card{
         width: auto;
         height: 200px;
         border: 2px solid $blackish;
@@ -19,7 +19,8 @@ h1{
         align-items: center;
         #selectimg{
             grid-area: pic;
-            height: 95%;
+            max-height: 95%;
+            max-width: 95%;
         }
         #deets-div{
             grid-area: deets;
