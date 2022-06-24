@@ -10,7 +10,7 @@ class Grouper extends Component{
 
     render(){
         return(
-            <div class="info-card">
+            <div className="info-card">
                 <Pic npic={this.props.pic} />
                 <Deets ndeets={this.props.deets} />
                 <Link nlink={this.props.link} />

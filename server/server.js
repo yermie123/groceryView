@@ -51,6 +51,14 @@ app.post('/signup',
   }
 );
 
+app.post('/login',
+  userController.checkUser,
+  (req, res) => {
+    res.redirect(302, '/secret');
+  }
+)
+
+
 
 
 //authentication for user
@@ -64,6 +72,13 @@ app.get('/secret', activeController.cookieCheck,
     }
   }
 );
+
+// app.post('/secret',
+//   cerealcontroller.getData,
+//   (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '../client/secondarypages/secret.html'));
+//   }
+// )
 
 app.listen(3000, () => {
     console.log("Server listening on port:3000");
