@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Grouper from './mainpage/grouper.jsx';
-import './mainpage/styles.scss';
+import Grouper from './components/grouper.jsx';
+import './components/styles.scss';
 
 let info = [
     {
