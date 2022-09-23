@@ -10,7 +10,7 @@ module.exports = {
         src: './client/index.js',
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     module: {
@@ -34,15 +34,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Development',
-            template: 'index.html'
+            title: 'GroceryView',
+            filename: 'index.html'
         }),
     ],
     devServer: {
         historyApiFallback: true,
         static: {
-            publicPath: '/build',
-            directory: path.resolve(__dirname, 'build')
+            directory: path.resolve(__dirname, 'dist')
         },
         proxy: {
             context: ['/api', '/auth', '/sec'],
