@@ -1,7 +1,12 @@
 $imageCarouselHeight: 500px;
 $centerTextPadding: 10px;
 
-$primaryColor: rgb(77, 182, 117);
+$primaryColor: #1C6758;
+$secondaryColor: #3D8361;
+$tertiaryColor: #D6CDA4;
+$fourthColor: #EEF2E6;
+
+$textColor: #EEF2E6;
 
 #img-carousel{
     position: relative;
@@ -23,10 +28,15 @@ $primaryColor: rgb(77, 182, 117);
         align-items: center;
 
         #learnmoreButton{
+            color: $textColor;
             background-color: $primaryColor;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 5px 5px 10px rgb(44, 44, 44);
+        }
+
+        #learnmoreButton:hover{
+            background-color: $secondaryColor;
         }
     }
 }
@@ -35,4 +45,9 @@ img{
     width: 100%;
     height: $imageCarouselHeight;
     object-fit: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

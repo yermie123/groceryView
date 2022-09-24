@@ -1,0 +1,146 @@
+$primaryColor: #1C6758;
+$secondaryColor: #3D8361;
+$tertiaryColor: #D6CDA4;
+$fourthColor: #EEF2E6;
+
+$gapmaincontent: 20px;
+$maincontenttopandbottom: 20px;
+$paddinginsidemaincontent: 20px;
+$t1and2radius: 8px;
+$maincontentradius: 10px;
+$maincontentshadowoffset: 10px;
+$imagewidth: 300px;
+
+html{
+    scroll-behavior: smooth;
+}
+
+#maincontent{
+    background-color: $fourthColor;
+
+    padding-top: $maincontenttopandbottom;
+    padding-bottom: $maincontenttopandbottom;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: $gapmaincontent;
+    align-items: center;
+    
+    #predtitle{
+        padding: $paddinginsidemaincontent;
+        background-color: $secondaryColor;
+        text-align: center;
+        border-radius: $maincontentradius;
+        box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        #t1{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border: 0.5px solid black;
+            border-radius: $t1and2radius;
+        }
+        #t2{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border: 0.5px solid black;
+            border-radius: $t1and2radius;
+        }
+    }
+    #d1{
+        padding: $paddinginsidemaincontent;
+        background-color: $secondaryColor;
+        border-radius: $maincontentradius;
+        box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        #d1-1{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: $t1and2radius;
+        }
+        h3{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border-radius: $t1and2radius;
+        }
+    }
+    #d2{
+        padding: $paddinginsidemaincontent;
+        background-color: $secondaryColor;
+        border-radius: $maincontentradius;
+        box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        #d2-2{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border-radius: $t1and2radius;
+        }
+        h3{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border-radius: $t1and2radius;
+        }
+    }
+    #d3{
+        padding: $paddinginsidemaincontent;
+        background-color: $secondaryColor;
+        border-radius: $maincontentradius;
+        box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        #d3-3{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border-radius: $t1and2radius;
+        }
+        h3{
+            padding: $paddinginsidemaincontent;
+            background-color: $tertiaryColor;
+            border-radius: $t1and2radius;
+        }
+    }
+
+    #linkbutton{
+        background-color: $secondaryColor;
+        color: $fourthColor;
+        padding: $paddinginsidemaincontent;
+        border-radius: $maincontentradius;
+        box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+    }
+
+
+    img{
+        width: $imagewidth;
+        max-height: 300px;
+        object-fit: contain;
+    }
+}
+
+#footer{
+    background-color: $primaryColor;
+    color: $fourthColor;
+    text-align: center;
+    margin-bottom: 0;
+    border: 1px solid red;
+}

@@ -1,32 +1,52 @@
-$navRightGap: 35px;
-$navSideMargins: 5px;
+$navRightGap: 20px;
+$navSideMargins: 10px;
+$marginFromTop: 5px;
 
-$primaryColor: rgb(77, 182, 117);
+$primaryColor: #1C6758;
+$secondaryColor: #3D8361;
+$tertiaryColor: #D6CDA4;
+$fourthColor: #EEF2E6;
+
+$textColor: #EEF2E6;
 
 
 nav{
     background-color: $primaryColor;
+    color: $textColor;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "left right";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     #title{
-        grid-area: left;
-        justify-self: start;
-
+        margin-top: $marginFromTop;
+        margin-bottom: $marginFromTop;
+        padding-top: 10px;
+        padding-bottom: 10px;
         margin-left: $navSideMargins;
     }
 
     #rightside{
-        grid-area: right;
-        justify-self: end;
-
+        margin-top: $marginFromTop;
         margin-right: $navSideMargins;
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        gap: $navRightGap;
+        justify-content: end;
+
+        .rightButtons{
+            margin-top: $marginFromTop;
+            margin-bottom: $marginFromTop;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: $navRightGap;
+            padding-right: $navRightGap;
+            
+        }
+
+        .rightButtons:hover{
+            background-color: aliceblue;
+            color: black;
+        }
     }
 }

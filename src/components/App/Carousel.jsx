@@ -21,7 +21,7 @@ export default function Carousel(props){
             <img src={props.cArray[`${Num}`]}></img>
             <div id="centered">
                 <h1>Keep Track of Grocery Price Data with Ease</h1>
-                <h2 id="learnmoreButton">Learn More</h2>
+                <h2 id="learnmoreButton" onClick={props.handleClick}>Learn More</h2>
             </div>
         </div>
     )
