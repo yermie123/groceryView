@@ -123,10 +123,18 @@ html{
 
     #linkbutton{
         background-color: $secondaryColor;
-        color: $fourthColor;
         padding: $paddinginsidemaincontent;
         border-radius: $maincontentradius;
         box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
+        transition: transform .5s;
+    }
+
+    #linkbutton:hover{
+        transform: scale(1.1);
+    }
+
+    a{
+        color: $fourthColor;
     }
 
 

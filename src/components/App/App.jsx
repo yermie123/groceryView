@@ -57,9 +57,9 @@ export default function App() {
                         Users Can Compare and Analyze Different Prices
                     </h3>
                 </div>
-                <div id='linkbutton'>
+                <a href='/mylist'><div id='linkbutton'>
                     <h3>Explore Our Free Features by Creating an Account</h3>
-                </div>
+                </div></a>
             </div>
             <div id='footer'>
                 <h3>Copyright 2022</h3>

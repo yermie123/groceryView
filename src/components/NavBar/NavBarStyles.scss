@@ -35,6 +35,7 @@ nav{
         justify-content: end;
 
         .rightButtons{
+            color: $textColor;
             margin-top: $marginFromTop;
             margin-bottom: $marginFromTop;
             padding-top: 10px;
@@ -46,7 +47,12 @@ nav{
 
         .rightButtons:hover{
             background-color: aliceblue;
-            color: black;
+            a{
+                color: black;
+            }
         }
+    }
+    a{
+        color: $textColor;
     }
 }
