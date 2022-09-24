@@ -1,13 +1,15 @@
 {
   "name": "groceryview",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "unique view on grocery price updates",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/server.js",
-    "build": "webpack",
-    "dev": "concurrently \"cross-env NODE_ENV=development nodemon server/server.js\" \"cross-env NODE_ENV=development webpack serve --open --hot\" ",
-    "test": "test"
+    "build": "vite build",
+    "dev": "concurrently \"vite dev\" \"nodemon server/server.js\"",
+    "test": "test",
+    "preview": "vite preview",
+    "vitedev": "vite dev"
   },
   "keywords": [
     "groceries",
@@ -23,6 +25,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "chai": "^4.3.6",
+    "concurrently": "^7.4.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -39,6 +42,9 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
@@ -46,6 +52,7 @@
     "sass": "^1.53.0",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
+    "vite": "^3.1.0",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2"
