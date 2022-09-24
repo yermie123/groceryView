@@ -1,0 +1,32 @@
+$navRightGap: 35px;
+$navSideMargins: 5px;
+
+$primaryColor: rgb(77, 182, 117);
+
+
+nav{
+    background-color: $primaryColor;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+
+    #title{
+        grid-area: left;
+        justify-self: start;
+
+        margin-left: $navSideMargins;
+    }
+
+    #rightside{
+        grid-area: right;
+        justify-self: end;
+
+        margin-right: $navSideMargins;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: $navRightGap;
+    }
+}

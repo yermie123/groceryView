@@ -7,3 +7,4 @@ Changes since last development version:
 Upcoming Changes to be implemented:
 - Dedicated server compatibility
 - Authentication
+- Imroved Animation to Image Carousel

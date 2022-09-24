@@ -1,0 +1,38 @@
+$imageCarouselHeight: 500px;
+$centerTextPadding: 10px;
+
+$primaryColor: rgb(77, 182, 117);
+
+#img-carousel{
+    position: relative;
+    text-align: center;
+
+    #centered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: $centerTextPadding;
+        background-color: white;
+        border-radius: 20px;
+        border: 0.5px solid black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #learnmoreButton{
+            background-color: $primaryColor;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgb(44, 44, 44);
+        }
+    }
+}
+
+img{
+    width: 100%;
+    height: $imageCarouselHeight;
+    object-fit: none;
+}
