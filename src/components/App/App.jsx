@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Outlet, Link } from 'react-router-dom';
+
 import Carousel from './Carousel.jsx';
 import NavBar from '../NavBar/NavBar.jsx';
 
@@ -57,9 +59,9 @@ export default function App() {
                         Users Can Compare and Analyze Different Prices
                     </h3>
                 </div>
-                <a href='/mylist'><div id='linkbutton'>
+                <Link to={`/mylist`}><div id='linkbutton'>
                     <h3>Explore Our Free Features by Creating an Account</h3>
-                </div></a>
+                </div></Link>
             </div>
             <div id='footer'>
                 <h3>Copyright 2022</h3>

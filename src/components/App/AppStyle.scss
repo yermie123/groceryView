@@ -127,14 +127,11 @@ html{
         border-radius: $maincontentradius;
         box-shadow: $maincontentshadowoffset $maincontentshadowoffset 10px gray;
         transition: transform .5s;
+        color: $fourthColor;
     }
 
     #linkbutton:hover{
         transform: scale(1.1);
-    }
-
-    a{
-        color: $fourthColor;
     }
 
 
