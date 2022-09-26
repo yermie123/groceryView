@@ -1,5 +1,6 @@
 $imageCarouselHeight: 500px;
 $centerTextPadding: 10px;
+$fontsize: 20px;
 
 $primaryColor: #1C6758;
 $secondaryColor: #3D8361;
@@ -33,6 +34,9 @@ $textColor: #EEF2E6;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 5px 5px 10px rgb(44, 44, 44);
+            border: 0;
+            font-family: inherit;
+            font-size: $fontsize;
         }
 
         #learnmoreButton:hover{

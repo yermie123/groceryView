@@ -1,0 +1,39 @@
+$primaryColor: #1C6758;
+$secondaryColor: #3D8361;
+$tertiaryColor: #D6CDA4;
+$fourthColor: #EEF2E6;
+
+$contentpadding: 10px;
+$pfontsize: 18px;
+$borderradius: 10px;
+$pmargin: 10px;
+$ppadding: 10px;
+
+#aboutpage{
+    text-align: center;
+}
+
+#pcontent{
+    background-color: $secondaryColor;
+    padding: $contentpadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        background-color: $tertiaryColor;
+        font-size: $pfontsize;
+        border-radius: $borderradius;
+        padding: $ppadding;
+        margin: $pmargin;
+    }
+}
+
+#footer{
+    background-color: $primaryColor;
+    color: $fourthColor;
+    text-align: center;
+    margin-bottom: 0;
+    border: 1px solid red;
+}
