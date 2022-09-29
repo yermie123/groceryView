@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, BrowserRouter } from 'react-router-dom';
 
 import Carousel from './Carousel.jsx';
 import NavBar from '../NavBar/NavBar.jsx';
@@ -14,6 +14,36 @@ const arr = [img1, img2, img3];
 import imgWebsites from '../../assets/websites.png';
 import imgData from '../../assets/data.png';
 import imgCashier from '../../assets/cashier.png';
+
+
+import SuperTokens, { SuperTokensWrapper } from "supertokens-auth-react";
+import ThirdPartyEmailPassword, {Github, Google, Facebook, Apple} from "supertokens-auth-react/recipe/thirdpartyemailpassword";
+import Session from "supertokens-auth-react/recipe/session";
+
+
+SuperTokens.init({
+    appInfo: {
+        // learn more about this on https://supertokens.com/docs/thirdpartyemailpassword/appinfo
+        appName: "GroceryView",
+        apiDomain: "http://localhost:8080",
+        websiteDomain: "http://localhost:3000",
+        apiBasePath: "/auth",
+        websiteBasePath: "/auth"
+    },
+    recipeList: [
+        ThirdPartyEmailPassword.init({
+            signInAndUpFeature: {
+                providers: [
+                    Github.init(),
+                    Google.init(),
+                    Facebook.init(),
+                    Apple.init(),
+                ]
+            }
+        }),
+        Session.init()
+    ]
+});
 
 export default function App() {
     const mainContentRef = React.useRef(null);
