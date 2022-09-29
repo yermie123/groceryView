@@ -39,7 +39,8 @@ SuperTokens.init({
                     Facebook.init(),
                     Apple.init(),
                 ]
-            }
+            },
+            useShadowDom: false
         }),
         Session.init()
     ]

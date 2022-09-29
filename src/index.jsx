@@ -20,6 +20,8 @@ import SuperTokens, { SuperTokensWrapper, getSuperTokensRoutesForReactRouterDom 
 import ThirdPartyEmailPassword, {Github, Google, Facebook, Apple} from "supertokens-auth-react/recipe/thirdpartyemailpassword";
 import Session from 'supertokens-auth-react/recipe/session';
 
+import './globalStyles.scss';
+
 /*
 Moved the below code to App, we'll see if that was a wise decision.
 */
