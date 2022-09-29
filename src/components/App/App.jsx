@@ -25,7 +25,7 @@ SuperTokens.init({
     appInfo: {
         // learn more about this on https://supertokens.com/docs/thirdpartyemailpassword/appinfo
         appName: "GroceryView",
-        apiDomain: "http://localhost:8080",
+        apiDomain: "http://localhost:3000",
         websiteDomain: "http://localhost:3000",
         apiBasePath: "/auth",
         websiteBasePath: "/auth"
