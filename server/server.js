@@ -14,6 +14,7 @@ const { middleware } = require("supertokens-node/lib/build/framework/express");
 const supertokens = require("supertokens-node");
 const Session = require("supertokens-node/recipe/session");
 const ThirdPartyEmailPassword = require("supertokens-node/recipe/thirdpartyemailpassword");
+const { errorHandler } = require('supertokens-node/framework/express');
 
 let { Google, Github, Apple, Facebook } = ThirdPartyEmailPassword;
 
@@ -72,11 +73,35 @@ app.use(cors({
 
 app.use(middleware());
 
-
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../dist/index.html'));
+});
+
+/* Other API Routes */
+
+
+
+
+
+
+
+
+
+
+
+
+app.use(errorHandler());
+
+app.use((err, req, res, next) => {
+    const defaultErr = {
+        log: 'Error handler caught middleware error',
+        status: 500,
+        message: { err: 'An error occured' }
+    }
+    const errorObj = Object.assign(defaultErr, err);
+    return res.status((errorObj.status)).json(errorObj.message);
 });
 
 app.listen(3000, (req, res) => {
